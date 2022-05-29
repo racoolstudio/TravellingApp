@@ -74,7 +74,10 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                               MaterialPageRoute(
                                   builder: (context) => const HomePage()));
                         }),
-                    child: RAppBotton(isResponsive: false)),
+                    child: SizedBox(
+                        width: 100,
+                        height: 50,
+                        child: RAppBotton(isResponsive: false))),
               ],
             ),
           ),
