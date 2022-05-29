@@ -188,15 +188,19 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             child: ListView.builder(
               itemBuilder: (context, index) => Column(
                 children: [
-                  Container(
-                    width: 80,
-                    margin: const EdgeInsets.only(left: 20),
-                    height: 60,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                        image: AssetImage('img/${exploreImages[index]}.jpg'),
-                        fit: BoxFit.cover,
+                  Expanded(
+                    child: Container(
+                      width: 80,
+                      margin: const EdgeInsets.only(
+                        left: 20,
+                      ),
+                      height: 60,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                          image: AssetImage('img/${exploreImages[index]}.jpg'),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   ),

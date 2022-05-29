@@ -3,9 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:ui2/constant.dart';
 import 'package:ui2/widgets/font.dart';
 
+// ignore: must_be_immutable
 class RAppBotton extends StatelessWidget {
   bool isResponsive;
-  RAppBotton({required this.isResponsive});
+  RAppBotton({Key? key, required this.isResponsive}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Flexible(

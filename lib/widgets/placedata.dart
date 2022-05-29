@@ -3,13 +3,16 @@ import 'package:ui2/widgets/font.dart';
 
 import '../constant.dart';
 
+// ignore: must_be_immutable
 class PlaceData extends StatelessWidget {
   PlaceData(
-      {required this.pName,
+      {Key? key,
+      required this.pName,
       required this.pLocation,
       required this.price,
       required this.rate,
-      required this.info});
+      required this.info})
+      : super(key: key);
   String pName;
   String pLocation;
   String price;

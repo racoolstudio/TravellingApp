@@ -67,7 +67,7 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                   ],
                 ),
                 SpaceV(veritical: 20),
-                InkWell(
+                GestureDetector(
                     onTap: () => setState(() {
                           Navigator.push(
                               context,
