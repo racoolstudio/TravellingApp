@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:ui2/constant.dart';
 import 'package:ui2/screens/homePage.dart';
-import 'package:ui2/widgets/responsiveAppBotton.dart';
 import 'package:ui2/widgets/space.dart';
 
 import '../widgets/textslider.dart';
@@ -74,10 +74,23 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                               MaterialPageRoute(
                                   builder: (context) => const HomePage()));
                         }),
-                    child: SizedBox(
-                        width: 100,
-                        height: 50,
-                        child: RAppBotton(isResponsive: false))),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: kMainColor,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      width: 100,
+                      height: 50,
+                      margin: const EdgeInsets.only(top: 5),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 6.0, left: 4),
+                        child: SvgPicture.asset(
+                          'img/arrow.svg',
+                          color: Colors.white,
+                          height: 80,
+                        ),
+                      ),
+                    ))
               ],
             ),
           ),
